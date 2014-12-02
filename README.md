@@ -167,6 +167,15 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 add(2, 5); // 7
 add(2)(5); // 7
 ```
+**Answer:**
+```javascript
+function add(a, b){
+    if(typeof b === "undefined"){
+        return (function(b){return a + b;});
+    }
+    return a + b;
+}
+```
 
 *Question: What value is returned from the following statement?*
 ```javascript
